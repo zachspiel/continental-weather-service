@@ -1,0 +1,85 @@
+html {
+  scroll-behavior: smooth;
+}
+a > i.down-arrow {
+  color: #ffffff !important;
+}
+i.down-arrow {
+  animation-name: mover;
+  -webkit-animation: mover 0.5s infinite alternate;
+  animation: mover 0.5s infinite alternate;
+}
+@-webkit-keyframes mover {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-10px);
+  }
+}
+@keyframes mover {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-10px);
+  }
+}
+.down-arrow.desktop {
+  margin-top: 1.5rem;
+}
+.down-arrow.mobile {
+  margin-top: 2.5rem;
+}
+.ui.homepage-heading {
+  margin-bottom: 0px;
+  font-weight: normal;
+}
+.ui.homepage-heading.desktop {
+  font-size: 4em !important;
+  margin-top: 3em !important;
+}
+.ui.homepage-heading.mobile {
+  font-size: 2em !important;
+  margin-top: 1.5em !important;
+}
+.ui.segment.parallax-section {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  position: relative;
+  min-height: 700px;
+  padding: 1em 0em;
+}
+.ui.inverted.section-divider-header {
+  font-size: 4em;
+  font-weight: normal;
+  margin-bottom: 0;
+  margin-top: 3em;
+}
+.ui.segment.landing-page-image {
+  background-image: url('../images/banner-image.jpg') !important;
+}
+.ui.segment.referrals-section {
+  background-image: url('../images/referrals.jpg') !important;
+}
+.ui.segment.services-offered-section {
+  background-image: url('../images/services-offered.jpg') !important;
+}
+.ui.segment.contact-section {
+  background-image: url('../images/contact-us.jpg') !important;
+}
+.ui.form {
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+@media (max-width: 768px) {
+  .ui.form {
+    width: 75% !important;
+  }
+}
+.header-blue {
+  color: #4183c4 !important;
+}
