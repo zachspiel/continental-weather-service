@@ -46,7 +46,7 @@ router.post('/contact', (req, res) => {
     attachments: [
       {
         filename: 'favicon.jpg',
-        path: path.join(__dirname, '..', 'public', 'images', 'favicon.jpg'),
+        path: path.join(__dirname, '..', 'client', 'public', 'images', 'favicon.jpg'),
         cid: 'CWS@logo.ee',
       },
     ],
