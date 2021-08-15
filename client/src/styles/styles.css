@@ -70,12 +70,16 @@ i.down-arrow {
 .ui.segment.contact-section {
   background-image: url('../images/contact-us.jpg') !important;
 }
+
 .ui.form {
   margin-left: auto;
   margin-right: auto;
   width: 50%;
 }
 @media (max-width: 768px) {
+  .ui.circular.image {
+    display: none;
+  }
   .ui.form {
     width: 75% !important;
   }

@@ -53,7 +53,7 @@ const AboutCWS = () => {
                 />
               </Button>
             </Grid.Column>
-            <Grid.Column only='computer' floated='right' width={6}>
+            <Grid.Column floated='right' width={6}>
               <Image src='/images/favicon.jpg' size='medium' circular />
             </Grid.Column>
           </Grid.Row>
