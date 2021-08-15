@@ -28,7 +28,6 @@
     "start": "cd server && yarn start"
   },
   "heroku-run-build-script": true,
-  "proxy": "http://localhost:5000",
   "eslintConfig": {
     "extends": [
       "react-app",
