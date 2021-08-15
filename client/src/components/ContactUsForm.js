@@ -28,7 +28,7 @@ const ContactUsForm = () => {
     setIsHidden(false);
   };
 
-  const onSubmit = () => {
+  const onSubmit = async () => {
     const { email } = formState;
     const isEmailValid = new RegExp(/[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,15}/g).test(
       email
@@ -42,12 +42,15 @@ const ContactUsForm = () => {
   };
 
   const sendFormData = async () => {
-    let response = await fetch(`0.0.0.0:${process.env.PORT || 5000}/contact`, {
+    const { name, email, message } = formState;
+    console.log(formState);
+    const formData = { name: name, email: email, message: message };
+    let response = await fetch('http://localhost:5000/contact', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json;charset=utf-8',
       },
-      body: JSON.stringify(formState),
+      body: JSON.stringify(formData),
     });
 
     let result = await response.json();

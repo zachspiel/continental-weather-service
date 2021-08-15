@@ -1,4 +1,3 @@
-import React from 'react';
 import { Container, Divider, List, Segment } from 'semantic-ui-react';
 import SegmentDivider from '../views/SegmentDivider';
 import Fade from 'react-reveal/Fade';
