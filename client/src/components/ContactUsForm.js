@@ -25,7 +25,7 @@ const ContactUsForm = () => {
   };
 
   const handleDismiss = () => {
-    setIsHidden(false);
+    setIsHidden(true);
   };
 
   const onSubmit = async () => {
@@ -43,7 +43,6 @@ const ContactUsForm = () => {
 
   const sendFormData = async () => {
     const { name, email, message } = formState;
-    console.log(formState);
     const formData = { name: name, email: email, message: message };
     let response = await fetch('/contact', {
       method: 'POST',
