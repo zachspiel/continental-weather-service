@@ -86,6 +86,12 @@ i.down-arrow {
   .ui.form {
     width: 75% !important;
   }
+  .ui.segment.parallax-section {
+    -webkit-background-size: contain !important;
+    -moz-background-size: contain !important;
+    -o-background-size: contain !important;
+    background-size: contain !important;
+  }
 }
 .header-blue {
   color: #4183c4 !important;
