@@ -45,6 +45,9 @@ i.down-arrow {
 }
 .ui.segment.parallax-section {
   background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center;
@@ -86,8 +89,4 @@ i.down-arrow {
 }
 .header-blue {
   color: #4183c4 !important;
-}
-img {
-  max-width: 100%;
-  max-height: 100%;
 }
