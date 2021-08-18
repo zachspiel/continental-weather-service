@@ -61,6 +61,12 @@ i.down-arrow {
   margin-bottom: 0;
   margin-top: 3em;
 }
+.about-section-header {
+  font-size: 2em !important;
+}
+.referral-header {
+  font-size: 1.5em;
+}
 .ui.segment.landing-page-image {
   background-image: url('../images/banner-image.jpg') !important;
 }
@@ -73,7 +79,6 @@ i.down-arrow {
 .ui.segment.contact-section {
   background-image: url('../images/contact-us.jpg') !important;
 }
-
 .ui.form {
   margin-left: auto;
   margin-right: auto;
@@ -87,10 +92,19 @@ i.down-arrow {
     width: 75% !important;
   }
   .ui.segment.parallax-section {
-    -webkit-background-size: contain !important;
-    -moz-background-size: contain !important;
-    -o-background-size: contain !important;
-    background-size: contain !important;
+    min-height: 350px !important;
+  }
+  .ui.inverted.section-divider-header {
+    margin-top: 2em;
+  }
+  .ui.segment.parallax-section {
+    background-position: left !important;
+  }
+  .about-section-header {
+    text-align: center !important;
+  }
+  .referral-header {
+    font-size: 1.2em !important;
   }
 }
 .header-blue {

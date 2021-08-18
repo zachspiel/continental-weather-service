@@ -29,7 +29,6 @@ class MobileContainer extends Component {
         <Sidebar.Pusher dimmed={sidebarOpened}>
           <Segment
             textAlign='center'
-            style={{ minHeight: 350, padding: '1em 0em' }}
             className='parallax-section landing-page-image'
             vertical
           >

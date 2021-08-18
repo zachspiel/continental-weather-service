@@ -18,7 +18,7 @@ const AboutCWS = () => {
         <Grid container stackable verticalAlign='middle'>
           <Grid.Row>
             <Grid.Column width={8}>
-              <Header as='h3' style={{ fontSize: '2em' }}>
+              <Header as='h3' className='about-section-header'>
                 About Continental Weather Service
               </Header>
               <p style={{ fontSize: '1.33em' }}>
