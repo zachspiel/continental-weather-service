@@ -98,7 +98,7 @@ i.down-arrow {
     margin-top: 2em;
   }
   .ui.segment.parallax-section {
-    background-position: left !important;
+    background-size: contain !important;
   }
   .about-section-header {
     text-align: center !important;
