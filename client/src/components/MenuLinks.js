@@ -1,10 +1,10 @@
 import React from 'react';
-import { Menu } from 'semantic-ui-react';
+import { Menu, Image } from 'semantic-ui-react';
 
 const MenuLinks = () => (
   <>
     <Menu.Item as='h3' className='header-blue' href='#about'>
-      <b>CONTINENTAL WEATHER SERVICE</b>
+      <Image src='../images/favicon.jpg' size='tiny' circular />
     </Menu.Item>
     <Menu.Item as='a' href='#about' position='right'>
       ABOUT
@@ -15,7 +15,7 @@ const MenuLinks = () => (
     <Menu.Item as='a' href='#referrals'>
       REFERRALS
     </Menu.Item>
-    <Menu.Item as='a' href='#contact-us' style={{ marginRight: '15%' }}>
+    <Menu.Item as='a' href='#contact-us' style={{ marginRight: '10%' }}>
       CONTACT US
     </Menu.Item>
   </>
