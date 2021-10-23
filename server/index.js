@@ -36,7 +36,7 @@ router.post('/contact', (req, res) => {
   const message = req.body.message;
   const mail = {
     from: name,
-    to: 'zachspiel1122@gmail.com',
+    to: 'zachspiel1122@gmail.com,continentalweather@gmail.com',
     subject: 'Message recieved from Continental Weather Service Website!',
     html: `<p>Message from: ${name}</p>
             <p>${name}'s email: ${email}</p>
