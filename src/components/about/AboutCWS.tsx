@@ -79,7 +79,7 @@ const AboutCWS = () => {
         You will no longer have to rely on often outdated and inaccurate weather
         forecasts. Continental Weather Service tailors its forecasts to meet the
         exact needs of municipalities and snow removal services. We have over
-        twenty years of experience forecasting Chicagoland's winters. We use the
+        twenty years of experience forecasting {`Chicagoland's winters`}. We use the
         latest up-to-date equipment featuring DOPPLER RADAR and satellite which
         covers your specific plowing area.
       </Text>
