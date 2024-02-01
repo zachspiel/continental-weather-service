@@ -4,6 +4,7 @@ import "./globals.css";
 import "@mantine/core/styles.css";
 import "@mantine/notifications/styles.css";
 import { Notifications } from "@mantine/notifications";
+import { Analytics } from '@vercel/analytics/react';
 
 export const metadata: Metadata = {
   title: "Continental Weather Service",
@@ -44,6 +45,7 @@ export default function RootLayout({
           {children}
           <Notifications />
         </MantineProvider>
+        <Analytics />
       </body>
     </html>
   );
