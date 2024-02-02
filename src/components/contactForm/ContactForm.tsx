@@ -68,12 +68,14 @@ const ContactForm = () => {
           label="Name"
           placeholder="Your name"
           name="name"
+          size="md"
           {...form.getInputProps("name")}
         />
         <TextInput
           label="Email"
           placeholder="Your email"
           name="email"
+          size="md"
           {...form.getInputProps("email")}
         />
       </SimpleGrid>
@@ -86,6 +88,7 @@ const ContactForm = () => {
         minRows={5}
         autosize
         name="message"
+        size="md"
         {...form.getInputProps("message")}
       />
 
