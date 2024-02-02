@@ -16,7 +16,7 @@ export default function Home() {
         <Jumbotron
           title="Continental Weather Service"
           section="default"
-          description="Make Continental Weather Service your weather source"
+          description=""
         />
         <AboutCWS />
 
