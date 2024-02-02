@@ -57,9 +57,8 @@
 }
 
 .title {
-    font-weight: 800;
     font-size: rem(60px);
-    font-family: var(--font-brittany);
+    line-height: 1.1;
     padding-left: var(--mantine-spacing-md);
     padding-right: var(--mantine-spacing-md);
     color: white;
