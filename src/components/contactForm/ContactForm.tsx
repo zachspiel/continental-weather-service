@@ -1,16 +1,11 @@
 "use client";
 
 import { isEmail, isNotEmpty, useForm } from "@mantine/form";
-import {
-  Button,
-  Group,
-  SimpleGrid,
-  Textarea,
-  TextInput,
-  Title,
-} from "@mantine/core";
+import { Button, Group, SimpleGrid, Textarea, TextInput } from "@mantine/core";
 import { sendMail } from "@/cws/components/contactForm/contactFormSubmitAction";
 import { showNotification } from "@mantine/notifications";
+import SectionContainer from "@/cws/components/common/SectionContainer";
+import SectionTitle from "@/cws/components/common/SectionTitle";
 
 export interface ContactFormValues {
   name: string;
@@ -36,6 +31,7 @@ const ContactForm = () => {
   const handleSubmit = async (formValues: ContactFormValues) => {
     form.reset();
 
+    showNotification({ message: "Sending message....", color: "blue" });
     await sendMail(formValues)
       .then(() => {
         showNotification({
@@ -52,52 +48,46 @@ const ContactForm = () => {
   };
 
   return (
-    <form onSubmit={form.onSubmit(handleSubmit)}>
-      <Title
-        order={2}
-        size="h1"
-        style={{ fontFamily: "Greycliff CF, var(--mantine-font-family)" }}
-        fw={900}
-        ta="center"
-      >
-        Get in touch
-      </Title>
+    <SectionContainer>
+      <SectionTitle title={"Contact Us"} id="contactUs" />
 
-      <SimpleGrid cols={{ base: 1, sm: 2 }} mt="xl">
-        <TextInput
-          label="Name"
-          placeholder="Your name"
-          name="name"
+      <form onSubmit={form.onSubmit(handleSubmit)}>
+        <SimpleGrid cols={{ base: 1, sm: 2 }} mt="xl">
+          <TextInput
+            label="Name"
+            placeholder="Your name"
+            name="name"
+            size="md"
+            {...form.getInputProps("name")}
+          />
+          <TextInput
+            label="Email"
+            placeholder="Your email"
+            name="email"
+            size="md"
+            {...form.getInputProps("email")}
+          />
+        </SimpleGrid>
+
+        <Textarea
+          mt="md"
+          label="Message"
+          placeholder="Your message"
+          maxRows={10}
+          minRows={5}
+          autosize
+          name="message"
           size="md"
-          {...form.getInputProps("name")}
+          {...form.getInputProps("message")}
         />
-        <TextInput
-          label="Email"
-          placeholder="Your email"
-          name="email"
-          size="md"
-          {...form.getInputProps("email")}
-        />
-      </SimpleGrid>
 
-      <Textarea
-        mt="md"
-        label="Message"
-        placeholder="Your message"
-        maxRows={10}
-        minRows={5}
-        autosize
-        name="message"
-        size="md"
-        {...form.getInputProps("message")}
-      />
-
-      <Group justify="end" mt="xl">
-        <Button type="submit" size="md">
-          Send message
-        </Button>
-      </Group>
-    </form>
+        <Group justify="end" mt="xl">
+          <Button type="submit" size="md">
+            Send message
+          </Button>
+        </Group>
+      </form>
+    </SectionContainer>
   );
 };
 

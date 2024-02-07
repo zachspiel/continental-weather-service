@@ -1,7 +1,15 @@
 .wrapper {
     position: relative;
+    background-image: url("/assets/images/banner-image.jpg");
+
     @media (min-width: $mantine-breakpoint-lg) {
         background-attachment: fixed;
+    }
+
+    @media (max-width: $mantine-breakpoint-md) {
+        padding-top: 250px;
+        padding-bottom: 20px;
+        background-size: cover;
     }
 
     @media (min-width: $mantine-breakpoint-md) {
@@ -10,47 +18,6 @@
         background-size: cover;
     }
 }
-
-.wrapperDefault {
-    background-image: url("/assets/images/banner-image.jpg");
-
-    @media (max-width: $mantine-breakpoint-md) {
-        padding-top: 250px;
-        padding-bottom: 20px;
-        background-size: cover;
-    }
-}
-
-.wrapperServicesOffered {
-    background-image: url("/assets/images/services-offered.jpg");
-
-    @media (max-width: $mantine-breakpoint-md) {
-        padding-top: 130px;
-        padding-bottom: 130px;
-        background-size: cover;
-    }
-}
-
-.wrapperReferrals {
-    background-image: url("/assets/images/referrals.jpg");
-
-    @media (max-width: $mantine-breakpoint-md) {
-        padding-top: 130px;
-        padding-bottom: 130px;
-        background-size: cover;
-    }
-}
-
-.wrapperContactUs {
-    background-image: url("/assets/images/contact-us.jpg");
-
-    @media (max-width: $mantine-breakpoint-md) {
-        padding-top: 130px;
-        padding-bottom: 130px;
-        background-size: cover;
-    }
-}
-
 
 .inner {
     position: relative;

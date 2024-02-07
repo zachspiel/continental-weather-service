@@ -1,10 +1,9 @@
-import { AppShell, AppShellHeader, AppShellMain, Text } from "@mantine/core";
-import SectionContainer from "@/cws/components/common/SectionContainer";
+import { AppShell, AppShellHeader, AppShellMain } from "@mantine/core";
 import Header from "@/cws/components/header/Header";
 import Jumbotron from "@/cws/components/jumbotron/Jumbotron";
 import AboutCWS from "@/cws/components/about/AboutCWS";
-import Referrals from "@/cws/components/referrals/Referrals";
 import ContactForm from "@/cws/components/contactForm/ContactForm";
+import Testimonials from "@/cws/components/testimonials/Testimonials";
 
 export default function Home() {
   return (
@@ -13,30 +12,11 @@ export default function Home() {
         <Header />
       </AppShellHeader>
       <AppShellMain>
-        <Jumbotron
-          title="Continental Weather Service"
-          section="default"
-          description=""
-        />
+        <Jumbotron title="Continental Weather Service" />
+
         <AboutCWS />
-
-        <Jumbotron title="Referrals" section="referrals" />
-
-        <SectionContainer>
-          <Text>
-            A list of references is available upon request. The two following
-            testimonials are just a small sampling of our many satisfied clients
-            in the Chicago area.
-          </Text>
-
-          <Referrals />
-        </SectionContainer>
-
-        <Jumbotron title="Contact Us" section="contactUs" />
-
-        <SectionContainer>
-          <ContactForm />
-        </SectionContainer>
+        <Testimonials />
+        <ContactForm />
       </AppShellMain>
     </AppShell>
   );

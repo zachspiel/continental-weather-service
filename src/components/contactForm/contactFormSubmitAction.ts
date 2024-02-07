@@ -14,22 +14,13 @@ const contactEmail = nodemailer.createTransport({
 });
 
 export async function sendMail(formValues: ContactFormValues) {
-  return new Promise((resolve, reject) => {
-    const mail = {
-      from: formValues.email,
-      to: process.env.EMAIL_RECIPIENTS,
-      subject: "Message received from Continental Weather Service Website!",
-      html: render(EmailTemplate(formValues)),
-    };
+  const mail = {
+    from: formValues.email,
+    to: process.env.EMAIL_RECIPIENTS,
+    subject: "Message received from Continental Weather Service Website!",
+    html: render(EmailTemplate(formValues)),
+  };
 
-    contactEmail.sendMail(mail, (error) => {
-      if (error) {
-        console.log("Message cannot be sent");
-        reject(error);
-      } else {
-        console.log("Message sent");
-        resolve("Message sent");
-      }
-    });
-  });
+  const result = await contactEmail.sendMail(mail);
+  return result.accepted;
 }

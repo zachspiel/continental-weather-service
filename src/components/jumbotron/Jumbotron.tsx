@@ -3,26 +3,12 @@ import classes from "./jumbotron.module.css";
 
 interface Props {
   title: string;
-  section: "default" | "contactUs" | "referrals" | "servicesOffered";
   description?: string;
 }
 
-const Jumbotron = ({ title, section, description }: Props): JSX.Element => {
-  const getClassName = () => {
-    switch (section) {
-      case "contactUs":
-        return classes.wrapperContactUs;
-      case "referrals":
-        return classes.wrapperReferrals;
-      case "servicesOffered":
-        return classes.wrapperServicesOffered;
-      default:
-        return classes.wrapperDefault;
-    }
-  };
-
+const Jumbotron = ({ title, description }: Props): JSX.Element => {
   return (
-    <div className={`${classes.wrapper} ${getClassName()}`} id={section}>
+    <div className={classes.wrapper}>
       <Overlay color="#000" opacity={0.65} zIndex={0} />
 
       <div className={classes.inner}>

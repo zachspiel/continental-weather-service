@@ -33,8 +33,3 @@ for more information.
 NEXT_PUBLIC_EMAIL={your email}
 NEXT_PUBLIC_PASS={your email password}
 ```
-
-## Demo
-
-![Continental Weather Service website demo](./demo/demo.png)
-
