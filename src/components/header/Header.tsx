@@ -18,7 +18,7 @@ import { IconMoon, IconSun } from "@tabler/icons-react";
 
 const links = [
   { link: "#about", label: "About" },
-  { link: "#referrals", label: "Referrals" },
+  { link: "#testimonials", label: "Testimonials" },
   { link: "#contactUs", label: "Contact Us" },
 ];
 

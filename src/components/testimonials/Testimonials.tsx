@@ -1,7 +1,9 @@
-import classes from "./referrals.module.css";
+import classes from "./testimonials.module.css";
 import { Group, Paper, Text } from "@mantine/core";
+import SectionContainer from "@/cws/components/common/SectionContainer";
+import SectionTitle from "@/cws/components/common/SectionTitle";
 
-const referrals = [
+const testimonials = [
   {
     name: "Kenneth R. Neal",
     title: "Street Superintendent",
@@ -44,27 +46,32 @@ const referrals = [
   },
 ];
 
-const Referrals = () => {
-  return referrals.map((referral) => {
-    return (
-      <Paper
-        withBorder
-        radius="md"
-        className={classes.comment}
-        key={referral.name}
-      >
-        <Group>
-          <div>
-            <Text fz="sm">{referral.name}</Text>
-            <Text fz="xs" c="dimmed">
-              {referral.title} • {referral.location}
-            </Text>
-          </div>
-        </Group>
-        <div className={classes.content}>{referral.content}</div>
-      </Paper>
-    );
-  });
+const Testimonials = () => {
+  return (
+    <SectionContainer grayBackground>
+      <SectionTitle title="Testimonials" id="testimonials" />
+      {testimonials.map((referral) => {
+        return (
+          <Paper
+            withBorder
+            radius="md"
+            className={classes.comment}
+            key={referral.name}
+          >
+            <Group>
+              <div>
+                <Text fz="sm">{referral.name}</Text>
+                <Text fz="xs" c="dimmed">
+                  {referral.title} • {referral.location}
+                </Text>
+              </div>
+            </Group>
+            <div className={classes.content}>{referral.content}</div>
+          </Paper>
+        );
+      })}
+    </SectionContainer>
+  );
 };
 
-export default Referrals;
+export default Testimonials;
