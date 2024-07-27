@@ -1,6 +1,6 @@
 {
   "name": "continental-weather-service",
-  "version": "1.2.0",
+  "version": "2.0.0",
   "private": false,
   "license": "MIT",
   "author": {
@@ -8,36 +8,11 @@
     "email": "zachspielberger@gmail.com"
   },
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
-  },
-  "dependencies": {
-    "@mantine/core": "^7.5.0",
-    "@mantine/form": "^7.5.0",
-    "@mantine/hooks": "^7.5.0",
-    "@mantine/notifications": "^7.5.0",
-    "@react-email/components": "^0.0.14",
-    "@react-email/html": "^0.0.7",
-    "@react-email/render": "^0.0.12",
-    "@tabler/icons-react": "^2.46.0",
-    "@vercel/analytics": "^1.1.2",
-    "next": "14.1.0",
-    "nodemailer": "^6.9.9",
-    "react": "^18",
-    "react-dom": "^18"
+    "build": "tailwindcss -i ./src/styles/input.css -o ./src/styles/output.css --minify --watch "
   },
   "devDependencies": {
-    "@types/node": "^20",
-    "@types/nodemailer": "^6.4.14",
-    "@types/react": "^18",
-    "@types/react-dom": "^18",
-    "eslint": "^8",
-    "eslint-config-next": "14.1.0",
-    "postcss": "^8.4.33",
-    "postcss-preset-mantine": "^1.12.3",
-    "postcss-simple-vars": "^7.0.1",
-    "typescript": "^5"
+    "prettier": "^3.3.3",
+    "prettier-plugin-tailwindcss": "^0.6.5",
+    "tailwindcss": "^3.4.6"
   }
 }

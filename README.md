@@ -21,15 +21,21 @@ cd continental-weather-service
 3. Install dependencies
 
 ```bash
-yarn install
+npm install
+```
+
+4. Start Tailwind CSS build process
+
+```bash
+npm run build
 ```
 
 ## Configuration
 
-A `.env` file is required with the following two values for nodemailer to work properly. Please see the [nodemailer documentation](https://nodemailer.com) 
+A `.env` file is required with the following two values for nodemailer to work properly. Please see the [nodemailer documentation](https://nodemailer.com)
 for more information.
 
 ```
-NEXT_PUBLIC_EMAIL={your email}
-NEXT_PUBLIC_PASS={your email password}
+EMAIL={your email}
+PASS={your email password}
 ```
