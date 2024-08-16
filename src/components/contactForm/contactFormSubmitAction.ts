@@ -13,7 +13,18 @@ const contactEmail = nodemailer.createTransport({
   },
 });
 
-export async function sendMail(formValues: ContactFormValues) {
+interface SendMailPayload extends ContactFormValues {
+  token?: string | null;
+}
+
+export async function sendMail(formValues: SendMailPayload) {
+  const response = await fetch(`https://www.google.com/recaptcha/api/siteverify?secret=${process.env.SECRET_KEY}&response=${formValues.token}`
+  , {method: "POST"}).then((res) => res.json());
+
+  if(!response.success) {
+    return {error: "CAPTCHA failed. Please try again later"};
+  }
+
   const mail = {
     from: formValues.email,
     to: process.env.EMAIL_RECIPIENTS,
@@ -22,5 +33,5 @@ export async function sendMail(formValues: ContactFormValues) {
   };
 
   const result = await contactEmail.sendMail(mail);
-  return result.accepted;
+  return {success: result.accepted};
 }
