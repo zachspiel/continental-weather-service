@@ -18,8 +18,6 @@ export interface ContactFormValues {
 const ContactForm = () => {
   const { capchaToken, recaptchaRef, handleRecaptcha } = useRecaptcha();
 
-  console.log(capchaToken);
-  console.log(process.env.NEXT_PUBLIC_SITE_KEY);
   const form = useForm<ContactFormValues>({
     initialValues: {
       name: "",
