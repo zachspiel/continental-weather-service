@@ -32,4 +32,6 @@ for more information.
 ```
 NEXT_PUBLIC_EMAIL={your email}
 NEXT_PUBLIC_PASS={your email password}
+SECRET_KEY={reCAPTCHA secret key}
+NEXT_PUBLIC_SITE_KEY={reCAPTCHA site key}
 ```
